@@ -62,7 +62,7 @@
 ### 4.3 引擎与协作（第 3-5 批提问）
 - **引擎**：Godot 4.x（确认 4.4.1 stable）
 - **语言**：GDScript（强类型）
-- **仓库**：GitHub 新建私有仓库 `dino-world`
+- **仓库**：GitHub 公开仓库 `dino-world`（https://github.com/zhyuuka/dino-world，原为私有，2026-07-21 改为 Public）
 - **协作方式**：GitHub 仓库跨会话同步 + 主 Agent 委托子 Agent 做重度实现任务
 - **最高原则**：质量优先（引擎和语法选型不考虑小白能否看懂，只看产出质量）
 
