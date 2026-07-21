@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Dino Icon v9 - Head Only</title>
+<style>
+body { margin:0; display:flex; justify-content:center; align-items:center; min-height:100vh; background:#1a1a1a; gap:50px; flex-wrap:wrap; padding:40px; }
+.wrap { width:512px; height:512px; border-radius:22%; overflow:hidden; box-shadow:0 8px 40px rgba(0,0,0,0.5); }
+.small { width:128px; height:128px; }
+.tiny { width:64px; height:64px; }
+svg { width:100%; height:100%; display:block; }
+</style></head><body>
+
+<div class="wrap">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFB347"/>
+      <stop offset="50%" stop-color="#FF8C42"/>
+      <stop offset="100%" stop-color="#D84A1A"/>
+    </linearGradient>
+    <linearGradient id="dino" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9CCC65"/>
+      <stop offset="50%" stop-color="#689F38"/>
+      <stop offset="100%" stop-color="#33691E"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DCEDC8"/>
+      <stop offset="100%" stop-color="#AED581"/>
+    </linearGradient>
+    <linearGradient id="mouthin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5D0000"/>
+      <stop offset="100%" stop-color="#1A0000"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </radialGradient>
+    <linearGradient id="horn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0D0A0"/>
+      <stop offset="100%" stop-color="#8D6E63"/>
+    </linearGradient>
+    <linearGradient id="tongue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <filter id="sh" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16"/>
+      <feOffset dx="0" dy="20"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bg)"/>
+  <circle cx="512" cy="480" r="400" fill="#FFF" opacity="0.05"/>
+
+  <g filter="url(#sh)" transform="translate(0, 60)">
+
+    <path d="M80 520
+             Q40 300 280 200
+             Q520 100 740 80
+             Q900 70 1000 170
+             Q1040 220 1040 310
+             Q1040 420 990 500
+             L960 550
+             Q940 580 905 578
+             L840 575
+             Q805 575 790 600
+             L775 645
+             Q762 675 725 672
+             L670 668
+             Q640 668 625 690
+             L612 725
+             Q600 755 565 752
+             L510 748
+             Q475 748 462 772
+             L448 810
+             Q438 835 402 828
+             L350 818
+             Q310 812 300 778
+             L288 700
+             Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="12" stroke-linejoin="round"/>
+
+    <path d="M200 500
+             Q240 310 470 250
+             Q600 220 720 225
+             L730 340
+             Q735 380 705 400
+             L630 445
+             Q595 465 588 490
+             L580 550
+             Q578 575 550 578
+             L470 585
+             Q430 588 415 565
+             L385 495
+             Q370 460 340 458
+             L280 465 Z"
+          fill="url(#belly)" opacity="0.75"/>
+
+    <path d="M480 450
+             Q680 470 870 440
+             L1000 415
+             Q1040 408 1045 440
+             L1030 520
+             Q1022 548 988 545
+             L900 535
+             Q855 532 838 558
+             L822 600
+             Q808 628 772 625
+             L690 618
+             Q655 615 638 638
+             L625 672
+             Q612 695 578 690
+             L520 682
+             Q488 678 472 700
+             L458 732
+             Q445 755 410 748
+             L355 738
+             Q315 732 310 700
+             L298 635
+             Q292 605 330 600
+             L430 585
+             Q490 575 545 555
+             Q580 540 585 520
+             L575 500
+             Q565 480 560 465 Z"
+          fill="url(#mouthin)" stroke="#1A0A00" stroke-width="10" stroke-linejoin="round"/>
+
+    <path d="M380 560 Q520 595 680 580 Q780 570 870 540
+             Q895 535 888 568 L872 605 Q858 620 808 615
+             L710 608 Q655 605 585 618 Q500 632 410 608
+             Q365 596 360 575 Z"
+          fill="url(#tongue)" opacity="0.95"/>
+
+    <g fill="#FFF" stroke="#1A0A0A" stroke-width="5" stroke-linejoin="round">
+      <polygon points="510,465 540,465 525,530"/>
+      <polygon points="590,475 620,475 605 540"/>
+      <polygon points="675,480 705 480 690 545"/>
+      <polygon points="760,478 790 478 775 538"/>
+      <polygon points="835,470 865 470 850 525"/>
+      <polygon points="900,458 930 458 915 508"/>
+      <polygon points="955,448 985 448 972 492"/>
+    </g>
+    <g fill="#FFF" stroke="#1A0A0A" stroke-width="5" stroke-linejoin="round">
+      <polygon points="330,595 360 595 345 645"/>
+      <polygon points="395,608 425 608 410 660"/>
+      <polygon points="465,615 495 615 480 670"/>
+      <polygon points="535,612 565 612 550 665"/>
+      <polygon points="605 602 635 602 620 652"/>
+      <polygon points="675 590 705 590 690 635"/>
+      <polygon points="740 572 770 572 755 615"/>
+      <polygon points="800 552 830 552 815 592"/>
+      <polygon points="855 530 885 530 870 568"/>
+    </g>
+
+    <ellipse cx="800" cy="290" rx="100" ry="120" fill="url(#eye)" stroke="#1A0A00" stroke-width="14"/>
+    <ellipse cx="818" cy="305" rx="35" ry="58" fill="#0D0D0D"/>
+    <circle cx="840" cy="270" r="17" fill="#FFF"/>
+    <circle cx="810" cy="340" r="8" fill="#FFF" opacity="0.6"/>
+
+    <path d="M530 140 Q580 0 750 0 Q790 25 782 120 Q775 185 705 220 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="10"/>
+    <path d="M310 230 Q365 60 540 20 Q580 50 572 155 Q565 230 475 270 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="10"/>
+
+    <path d="M555 70 Q625 0 790 0 Q830 25 820 125 Q810 200 725 250 Z"
+          fill="url(#horn)" stroke="#1A0A00" stroke-width="6"/>
+    <path d="M340 160 Q405 15 595 0 Q635 30 625 145 Q615 225 510 280 Z"
+          fill="url(#horn)" stroke="#1A0A00" stroke-width="6"/>
+
+    <g fill="#1B4008" opacity="0.3">
+      <ellipse cx="900" cy="400" rx="22" ry="14"/>
+      <ellipse cx="850" cy="460" rx="15" ry="10"/>
+      <ellipse cx="680" cy="160" rx="28" ry="17"/>
+      <ellipse cx="500" cy="240" rx="22" ry="14"/>
+      <ellipse cx="280" cy="280" rx="26" ry="16"/>
+      <ellipse cx="140" cy="410" rx="22" ry="14"/>
+      <ellipse cx="190" cy="500" rx="15" ry="9"/>
+    </g>
+
+    <path d="M1050 340 Q1150 300 1220 310 Q1215 345 1145 370 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="8"/>
+    <ellipse cx="1190" cy="312" rx="12" ry="7" fill="#1B4008"/>
+  </g>
+</svg>
+</div>
+
+<div class="wrap small">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bgs" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFB347"/><stop offset="50%" stop-color="#FF8C42"/><stop offset="100%" stop-color="#D84A1A"/></linearGradient><linearGradient id="dinos" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#9CCC65"/><stop offset="50%" stop-color="#689F38"/><stop offset="100%" stop-color="#33691E"/></linearGradient></defs>
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bgs)"/><g transform="translate(0, 60)">
+  <path d="M80 520 Q40 300 280 200 Q520 100 740 80 Q900 70 1000 170 Q1040 220 1040 310 Q1040 420 990 500 L960 550 Q940 580 905 578 L840 575 Q805 575 790 600 L775 645 Q762 675 725 672 L670 668 Q640 668 625 690 L612 725 Q600 755 565 752 L510 748 Q475 748 462 772 L448 810 Q438 835 402 828 L350 818 Q310 812 300 778 L288 700 Z" fill="url(#dinos)" stroke="#1B4008" stroke-width="12" stroke-linejoin="round"/>
+  <ellipse cx="800" cy="290" rx="100" ry="120" fill="#FFB300" stroke="#1A0A00" stroke-width="14"/><ellipse cx="818" cy="305" rx="35" ry="58" fill="#0D0D0D"/>
+  <path d="M480 450 Q680 470 870 440 L1000 415 Q1040 408 1045 440 L1030 520 Q1022 548 988 545 L900 535 Q855 532 838 558 L822 600 Q808 628 772 625 L690 618 Q655 615 638 638 L625 672 Q612 695 578 690 L520 682 Q488 678 472 700 L458 732 Q445 755 410 748 L355 738 Q315 732 310 700 L298 635 Q292 605 330 600 L430 585 Q490 575 545 555 Q580 540 585 520 L575 500 Q565 480 560 465 Z" fill="#5D0000" stroke="#1A0A00" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M530 140 Q580 0 750 0 Q790 25 782 120 Q775 185 705 220 Z" fill="url(#dinos)" stroke="#1B4008" stroke-width="10"/>
+  <path d="M310 230 Q365 60 540 20 Q580 50 572 155 Q565 230 475 270 Z" fill="url(#dinos)" stroke="#1B4008" stroke-width="10"/>
+  <path d="M555 70 Q625 0 790 0 Q830 25 820 125 Q810 200 725 250 Z" fill="#E0D0A0" stroke="#1A0A00" stroke-width="6"/>
+  <path d="M340 160 Q405 15 595 0 Q635 30 625 145 Q615 225 510 280 Z" fill="#E0D0A0" stroke="#1A0A00" stroke-width="6"/>
+  </g>
+</svg>
+</div>
+
+<div class="wrap tiny">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="bgt" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#FFB347"/><stop offset="50%" stop-color="#FF8C42"/><stop offset="100%" stop-color="#D84A1A"/></linearGradient><linearGradient id="dinot" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#9CCC65"/><stop offset="50%" stop-color="#689F38"/><stop offset="100%" stop-color="#33691E"/></linearGradient></defs>
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bgt)"/><g transform="translate(0, 60)">
+  <path d="M80 520 Q40 300 280 200 Q520 100 740 80 Q900 70 1000 170 Q1040 220 1040 310 Q1040 420 990 500 L960 550 Q940 580 905 578 L840 575 Q805 575 790 600 L775 645 Q762 675 725 672 L670 668 Q640 668 625 690 L612 725 Q600 755 565 752 L510 748 Q475 748 462 772 L448 810 Q438 835 402 828 L350 818 Q310 812 300 778 L288 700 Z" fill="url(#dinot)" stroke="#1B4008" stroke-width="12" stroke-linejoin="round"/>
+  </g>
+</svg>
+</div>
+
+</body></html>

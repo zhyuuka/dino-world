@@ -1,6 +1,82 @@
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" fill="#2d5a3d"/>
-  <path d="M20 90 Q30 50 60 50 L80 50 Q100 50 110 70 L110 90 L100 90 L100 80 L90 80 L90 90 L80 90 L80 70 L60 70 L60 90 L50 90 L50 80 L40 80 L40 90 Z" fill="#8bc34a" stroke="#33691e" stroke-width="2"/>
-  <circle cx="95" cy="60" r="3" fill="#000"/>
-  <path d="M105 55 L115 50 L110 60 Z" fill="#8bc34a" stroke="#33691e" stroke-width="1"/>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFB74D"/>
+      <stop offset="50%" stop-color="#F4511E"/>
+      <stop offset="100%" stop-color="#B71C1C"/>
+    </linearGradient>
+    <linearGradient id="dino" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8BC34A"/>
+      <stop offset="50%" stop-color="#558B2F"/>
+      <stop offset="100%" stop-color="#1B4008"/>
+    </linearGradient>
+    <linearGradient id="dinoLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C5E1A5"/>
+      <stop offset="100%" stop-color="#7CB342"/>
+    </linearGradient>
+    <linearGradient id="mouth" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5D0000"/>
+      <stop offset="100%" stop-color="#0A0000"/>
+    </linearGradient>
+    <radialGradient id="eye" cx="30%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="50%" stop-color="#FF6D00"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </radialGradient>
+    <linearGradient id="tongue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F44336"/>
+      <stop offset="100%" stop-color="#880E4F"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16"/>
+      <feOffset dx="0" dy="20"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" ry="224" fill="url(#bg)"/>
+  <circle cx="500" cy="500" r="380" fill="#FFF" opacity="0.05"/>
+
+  <g filter="url(#shadow)" transform="translate(80, 250)">
+    <path d="M700 20 Q760 25 780 75 Q795 140 760 205 L710 290 Q700 308 675 312 L420 342 Q375 347 358 372 L240 515 Q230 528 208 532 L60 555 Q32 558 28 535 L20 432 Q16 410 35 392 L145 290 Q240 208 305 165 Q360 128 415 108 Q470 90 525 82 Q580 75 630 72 Q670 70 700 20 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="14" stroke-linejoin="round"/>
+    <path d="M680 90 Q685 102 678 118 Q672 138 655 158 L610 220 Q602 232 585 235 L405 258 Q370 262 360 282 L275 385 Q268 394 258 396 L160 412 Q170 392 240 330 Q305 278 355 245 Q405 215 450 196 Q495 178 538 166 Q580 155 620 144 Q650 136 670 125 Q675 120 680 90 Z"
+          fill="url(#dinoLight)" opacity="0.55"/>
+    <path d="M690 290 Q735 298 745 325 Q755 358 740 390 L718 430 Q710 448 688 452 L420 482 Q375 487 358 515 L240 660 Q230 675 208 678 L60 702 Q32 705 28 682 L20 580 Q16 558 35 540 L145 438 Q240 355 305 312 Q360 275 415 255 Q470 238 525 230 Q580 222 630 218 Q670 215 690 290 Z"
+          fill="url(#mouth)" stroke="#1A0A00" stroke-width="12" stroke-linejoin="round"/>
+    <path d="M220 460 Q320 505 450 500 Q535 498 615 478 Q640 472 635 498 L625 530 Q618 548 590 552 L470 565 Q430 570 412 590 L380 635 Q375 645 362 645 L275 658 Q255 662 250 645 L242 612 Q248 590 310 515 Q355 468 220 460 Z"
+          fill="url(#tongue)" opacity="0.9"/>
+    <g fill="#FFF" stroke="#1A0A0A" stroke-width="4" stroke-linejoin="round">
+      <polygon points="440,248 465,248 452 305"/>
+      <polygon points="510,255 535,255 522 315"/>
+      <polygon points="580,262 605,262 592 320"/>
+      <polygon points="645,270 670,270 660 322"/>
+    </g>
+    <g fill="#FFF" stroke="#1A0A0A" stroke-width="4" stroke-linejoin="round">
+      <polygon points="310,410 335,410 322 468"/>
+      <polygon points="390,402 415,402 402 462"/>
+      <polygon points="475,398 500,398 488 458"/>
+      <polygon points="565,395 590,395 578 455"/>
+      <polygon points="640,388 665 388 655 445"/>
+    </g>
+    <ellipse cx="600" cy="130" rx="42" ry="50" fill="url(#eye)" stroke="#1A0A00" stroke-width="12"/>
+    <path d="M600 95 L588 165 L612 165 Z" fill="#0D0D0D"/>
+    <circle cx="610" cy="112" r="9" fill="#FFF"/>
+    <circle cx="596" cy="148" r="4" fill="#FFF" opacity="0.5"/>
+    <path d="M415 42 Q450 18 520 12 Q550 10 560 35 Q568 55 560 70 Q552 82 540 86 Q528 90 518 85 Q510 82 505 75 Q500 68 492 63 Q482 58 472 62 Q460 66 Q450 62 Q440 58 Q430 52 Q422 48 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="9"/>
+    <path d="M428 48 Q455 28 518 24 Q540 23 545 40 Q550 52 Q545 62 Q540 68 Q532 72 Q525 70 Q520 65 Q515 60 Q508 56 Q500 54 Q492 56 Q485 60 Q478 58 Q470 55 Q462 52 Q455 50 Q448 48 Z"
+          fill="#D7CCC8" opacity="0.6"/>
+    <g fill="#1B4008" opacity="0.25">
+      <ellipse cx="180" cy="350" rx="16" ry="10"/>
+      <ellipse cx="150" cy="420" rx="12" ry="8"/>
+      <ellipse cx="135" cy="480" rx="10" ry="6"/>
+      <ellipse cx="360" cy="200" rx="14" ry="9"/>
+      <ellipse cx="460" cy="165" rx="11" ry="7"/>
+    </g>
+    <path d="M800 140 Q845 130 875 148 Q868 172 Q835 185 Z"
+          fill="url(#dino)" stroke="#1B4008" stroke-width="9"/>
+    <ellipse cx="862" cy="146" rx="10" ry="6" fill="#1B4008"/>
+  </g>
 </svg>
