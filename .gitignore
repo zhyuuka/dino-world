@@ -7,8 +7,10 @@ godot4
 
 # === Android SDK / 构建产物 ===
 android-sdk/
-*.apk
+# APK 是最终交付物，需要入库让用户从 GitHub 直接下载
+# *.apk  ← 不排除 APK
 *.aab
+*.apk.idsig
 *.keystore
 !debug.keystore
 local.properties
