@@ -2,9 +2,10 @@ class_name StateController
 extends Node
 ## AI 状态机控制器
 ## 维护 AI 恐龙的当前状态、停留时间，并发出状态切换信号
-## 状态枚举：WANDER（游荡）/ CHASE（追击）/ FLEE（逃跑）/ DEAD（死亡）
+## 状态枚举：
+##   WANDER（游荡）/ CHASE（追击）/ FLEE（逃跑）/ DEAD（死亡）/ SEEK_FOOD（寻找果子，食草 AI 专用）
 
-enum State { WANDER, CHASE, FLEE, DEAD }
+enum State { WANDER, CHASE, FLEE, DEAD, SEEK_FOOD }
 
 signal state_changed(old_state: State, new_state: State)
 

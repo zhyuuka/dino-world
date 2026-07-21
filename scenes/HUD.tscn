@@ -1,9 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://bhudsceeeene01x"]
+[gd_scene load_steps=6 format=3 uid="uid://bhudsceeeene01x"]
 
 [ext_resource type="Script" path="res://scripts/ui/HUD.gd" id="1_hud"]
 
-[sub_resource type="StyleBoxFlat" id="sb_fill"]
+[sub_resource type="StyleBoxFlat" id="sb_health_fill"]
 bg_color = Color(0.3, 0.85, 0.3, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="sb_hunger_fill"]
+bg_color = Color(0.95, 0.8, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="sb_evolve_fill"]
+bg_color = Color(0.9, 0.65, 0.2, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="sb_evolve_bg"]
+bg_color = Color(0.15, 0.1, 0.05, 0.7)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -21,10 +42,6 @@ mouse_filter = 2
 
 [node name="HealthBar" type="ProgressBar" parent="Control"]
 layout_mode = 1
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
 offset_left = 20.0
 offset_top = 20.0
 offset_right = 240.0
@@ -32,7 +49,7 @@ offset_bottom = 56.0
 max_value = 10.0
 value = 10.0
 show_percentage = false
-theme_override_styles/foreground = SubResource("sb_fill")
+theme_override_styles/foreground = SubResource("sb_health_fill")
 
 [node name="HealthLabel" type="Label" parent="Control/HealthBar"]
 layout_mode = 1
@@ -48,6 +65,41 @@ horizontal_alignment = 1
 vertical_alignment = 1
 text = "10 / 10"
 
+[node name="HungerBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 240.0
+offset_bottom = 96.0
+max_value = 100.0
+value = 100.0
+show_percentage = false
+theme_override_styles/foreground = SubResource("sb_hunger_fill")
+
+[node name="HungerLabel" type="Label" parent="Control/HungerBar"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = -8.0
+offset_bottom = -4.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "100 / 100"
+
+[node name="EvolutionLabel" type="Label" parent="Control"]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 102.0
+offset_right = 240.0
+offset_bottom = 130.0
+horizontal_alignment = 0
+vertical_alignment = 1
+text = "幼龙 Lv.1"
+
 [node name="KillLabel" type="Label" parent="Control"]
 layout_mode = 1
 anchor_left = 1.0
@@ -57,9 +109,54 @@ anchor_bottom = 0.0
 offset_left = -200.0
 offset_top = 24.0
 offset_right = -20.0
-offset_bottom = 60.0
+offset_bottom = 50.0
 horizontal_alignment = 2
 text = "击杀: 0"
+
+[node name="EvolutionProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -200.0
+offset_top = 56.0
+offset_right = -20.0
+offset_bottom = 84.0
+max_value = 5.0
+value = 0.0
+show_percentage = false
+theme_override_styles/foreground = SubResource("sb_evolve_fill")
+theme_override_styles/background = SubResource("sb_evolve_bg")
+
+[node name="EvolutionProgressLabel" type="Label" parent="Control/EvolutionProgressBar"]
+layout_mode = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = -8.0
+offset_bottom = -2.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "进化进度 0/5"
+
+[node name="EvolutionBanner" type="Label" parent="Control"]
+visible = false
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -60.0
+offset_right = 250.0
+offset_bottom = 0.0
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "进化为【XX】！"
 
 [node name="HintLabel" type="Label" parent="Control"]
 layout_mode = 1
@@ -67,13 +164,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -200.0
+offset_left = -250.0
 offset_top = -90.0
-offset_right = 200.0
+offset_right = 250.0
 offset_bottom = -30.0
 horizontal_alignment = 1
 vertical_alignment = 1
-text = "咬击 AI 恐龙获得分数"
+text = "咬死恐龙吃尸体回饥饿，吃果子也能少量回饥饿"
 
 [node name="GameOverLabel" type="Label" parent="Control"]
 visible = false

@@ -8,22 +8,55 @@
 - **仓库**：https://github.com/zhyuuka/dino-world （Private）
 - **目标平台**：Android（最终交付 APK）
 - **引擎**：Godot 4.4.1 stable + GDScript
-- **当前阶段**：第 1 阶段（小型 3D 场景 + 1 只玩家恐龙 + 几只 AI 恐龙，单机）
+- **当前阶段**：第 2 阶段（饥饿/食性/5 段进化系统）已完成
 
-## 第 1 阶段目标
+## 第 1 阶段目标（已完成）
 - [x] Godot 4.4.1 引擎在沙箱跑通（/workspace/tools/godot）
 - [x] Android SDK 安装配置完成（/workspace/tools/android-sdk，build-tools 34.0.0 + platform-34）
 - [x] Godot Android 导出模板安装（/root/.local/share/godot/export_templates/4.4.1.stable/）
 - [x] 项目骨架（project.godot + 目录结构 + .gitignore + export_presets.cfg）
 - [x] GitHub 私有仓库 dino-world 创建
-- [x] 首次推送到 GitHub（本次会话完成）
-- [x] APK 导出跑通（生成 47MB debug APK）
-- [ ] 玩家恐龙场景（CharacterBody3D + 摄像机 + 操控）
-- [ ] 小型地形场景（StaticBody3D 地面 + 装饰物）
-- [ ] AI 恐龙（简单状态机：游荡/追击/逃跑）
-- [ ] HUD（血量、提示）
-- [ ] 触屏操控（虚拟摇杆 + 按钮）
-- [ ] 第 1 阶段最终 APK 交付
+- [x] 首次推送到 GitHub
+- [x] APK 导出跑通
+- [x] 玩家恐龙场景（CharacterBody3D + 摄像机 + 操控）
+- [x] 小型地形场景（StaticBody3D 地面 + 装饰物）
+- [x] AI 恐龙（简单状态机：游荡/追击/逃跑）
+- [x] HUD（血量、提示）
+- [x] 触屏操控（虚拟摇杆 + 按钮）
+- [x] 第 1 阶段最终 APK 交付
+
+## 第 2 阶段目标（已完成 2026-07-21）
+- [x] 饥饿系统（每 60 秒 -1，饥饿 0 时每 5 秒 -5 血）
+- [x] 食物系统：AI 尸体（玩家吃，回 30 饥饿 + 10 血，2 口）+ 果子（自动捡，回 5 饥饿）
+- [x] AI 食性分类：肉食（红橙，2 只，主动追玩家咬）+ 食草（绿棕，3 只，见玩家逃/找果子吃）
+- [x] 5 段进化系统：幼龙→少年→亚成体→成体→霸主，每吃 5 次食物进化一次
+  - 体型 ×1.15 / 血量上限 +20 / 咬击 +2 / 速度 +5% / 饥饿上限 +10
+  - 进化时金色发光 1 秒 + HUD 显示横幅 2 秒
+  - 死亡后保留进化等级（static var 跨场景）
+- [x] 尸体节点 AICorpse：变暗 + 躺倒，15 秒自动消失，可吃 2 口
+- [x] 果子生成器 FoodSpawner：8-12 个果子，30 秒重生
+- [x] HUD 升级：血条 / 饥饿条（黄）/ 进化等级标签 / 进化进度条 / 进化横幅
+- [x] 死亡惩罚：保留进化等级，重开时饥饿/血量回满、AI/果子重新生成
+- [x] 编译通过（--import 无错）
+- [x] APK 打包成功（47.3MB）
+
+## 第 2 阶段交付物
+- 新增文件：
+  - scripts/world/Berry.gd + scenes/Berry.tscn（果子节点）
+  - scripts/world/FoodSpawner.gd + scenes/FoodSpawner.tscn（果子生成器）
+  - scripts/ai/AICorpse.gd + scenes/AICorpse.tscn（AI 尸体节点）
+- 改造文件：
+  - scripts/player/PlayerDino.gd（加饥饿/5 段进化/吃食物/发光特效）
+  - scripts/ai/AIDino.gd（加 Diet 枚举/食肉食草行为差异/寻找果子状态）
+  - scripts/ai/StateController.gd（加 SEEK_FOOD 状态）
+  - scripts/ui/HUD.gd + scenes/HUD.tscn（加饥饿条/进化等级/进化进度/横幅）
+  - scripts/game/Main.gd（串联所有系统，2 肉食 + 3 食草 AI 生成）
+- APK：build/dino-world-debug.apk（47.3MB，arm64-v8a，已签名）
+
+## 第 3 阶段目标（待办）
+- 扩大地图（更大地形 + 更多装饰）
+- 加多种恐龙（不同体型/行为模式）
+- 加探索/资源点
 
 ## 当前会话状态（最新更新：2026-07-21）
 
